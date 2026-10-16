@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>سفارش آنلاین کافی‌نت ساحل</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#151d32;--panel2:#1c2740;--text:#f8fafc;--muted:#aab6cc;--accent:#38bdf8;--accent2:#818cf8;--line:#2a3650;--ok:#34d399}
+    *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(ellipse at top right,#172554 0,transparent 42%),var(--bg);color:var(--text);line-height:1.8}
+    .wrap{width:min(1080px,92%);margin:auto}.top{padding:22px 0;border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:bold;font-size:1.15rem}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#081225;font-size:25px}
+    .tag{font-size:.82rem;color:#bae6fd;background:#0c3046;border:1px solid #164e63;padding:5px 12px;border-radius:99px}
+    .hero{padding:54px 0 28px;display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center}.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.35;margin:12px 0}.hero h1 span{color:var(--accent)}.muted{color:var(--muted)}.hero-card,.panel,.service{background:linear-gradient(145deg,rgba(28,39,64,.95),rgba(21,29,50,.95));border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 15px 45px #0002}
+    .hero-card .big{font-size:3.6rem;text-align:center}.hero-card h3{text-align:center;margin:0}.hero-card p{text-align:center;color:var(--muted);margin-bottom:0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 18px;font:inherit;font-weight:bold;text-decoration:none;cursor:pointer;transition:.2s}.primary{background:linear-gradient(135deg,var(--accent),#818cf8);color:#07111f}.secondary{background:#26344f;color:var(--text);border:1px solid #3b4a67}.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+    section{padding:26px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:18px}.section-head h2{margin:0;font-size:1.65rem}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{padding:18px}.service .ico{font-size:1.8rem}.service h3{margin:5px 0}.service p{margin:0;color:var(--muted);font-size:.92rem}
+    .order-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.field{margin-bottom:14px}.field label{display:block;font-size:.92rem;margin-bottom:6px;color:#dbeafe}.field input,.field select,.field textarea{width:100%;background:#0c1427;border:1px solid #34425f;border-radius:11px;padding:12px;color:var(--text);font:inherit;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #38bdf822}.field textarea{min-height:95px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hint{font-size:.83rem;color:var(--muted)}.checkline{display:flex;gap:9px;align-items:flex-start;font-size:.88rem;color:var(--muted);margin:10px 0 16px}.checkline input{margin-top:8px}
+    .summary{position:sticky;top:16px;height:max-content}.summary h3{margin-top:0}.summary-row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.summary-row strong{color:#bae6fd}.total{font-size:1.15rem}.notice{border:1px solid #854d0e;background:#42200655;color:#fde68a;padding:12px;border-radius:12px;font-size:.85rem;margin-top:14px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{padding:16px;border:1px solid var(--line);border-radius:16px;background:#111a2e}.step b{display:block;color:var(--accent);font-size:1.1rem}
+    footer{margin-top:28px;padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .toast{display:none;padding:12px;border-radius:12px;margin-top:12px;background:#064e3b;color:#d1fae5}.toast.show{display:block}
+    @media(max-width:760px){.hero,.order-layout{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.summary{position:static}.hero{padding-top:32px}}
+    @media(max-width:480px){.services,.two{grid-template-columns:1fr}.hero-card{padding:18px}.btn{width:100%}}
+  </style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+  <div class="brand"><div class="logo">س</div><div>کافی‌نت ساحل <div class="muted" style="font-size:.76rem;font-weight:normal">ثبت سفارش آنلاین</div></div></div>
+  <span class="tag">سریع • ساده • آنلاین</span>
+  <a class="btn secondary" href="tel:09332731756" aria-label="تماس با کافی‌نت">تماس: 09332731756</a>
+</div></header>
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <span class="tag">خدمات اینترنتی و اداری</span>
+      <h1>کارهای اینترنتی‌ات را<br><span>راحت‌تر سفارش بده!</span></h1>
+      <p class="muted">نوع خدمت را انتخاب کن، اطلاعات لازم را بنویس و درخواستت را برای کافی‌نت ساحل آماده کن. قبل از ثبت، جزئیات سفارش را بررسی می‌کنی.</p>
+      <a class="btn primary" href="#order">ثبت سفارش جدید ←</a>
+    </div>
+    <div class="hero-card"><div class="big">💻</div><h3>سفارش بدون مراجعه اولیه</h3><p>درخواستت را آنلاین آماده کن و برای هماهنگی بعدی بفرست.</p></div>
+  </div>
+
+  <section>
+    <div class="section-head"><h2>خدمات قابل سفارش</h2><span class="muted">خدمت موردنیازت را انتخاب کن</span></div>
+    <div class="services">
+      <article class="service"><div class="ico">📝</div><h3>تایپ و تنظیم فایل</h3><p>تایپ، ویرایش، صفحه‌آرایی و تبدیل فایل‌ها</p></article>
+      <article class="service"><div class="ico">🖨️</div><h3>چاپ و اسکن</h3><p>آماده‌سازی سفارش چاپ، اسکن و کپی</p></article>
+      <article class="service"><div class="ico">📄</div><h3>فرم‌ها و ثبت‌نام</h3><p>راهنمایی برای تکمیل فرم‌ها و ثبت‌نام‌ها</p></article>
+      <article class="service"><div class="ico">🎓</div><h3>خدمات دانش‌آموزی</h3><p>کارهای مدرسه، فایل‌های درسی و ثبت‌نام آموزشی</p></article>
+      <article class="service"><div class="ico">🌐</div><h3>خدمات اینترنتی</h3><p>ثبت درخواست برای خدمات آنلاین گوناگون</p></article>
+      <article class="service"><div class="ico">📌</div><h3>سایر خدمات</h3><p>اگر خدمتت در فهرست نیست، توضیحات را بنویس</p></article>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="section-head"><h2>فرم ثبت سفارش</h2><span class="muted">فیلدهای ستاره‌دار ضروری‌اند</span></div>
+    <div class="order-layout">
+      <form class="panel" id="orderForm">
+        <div class="field"><label for="customer">نام و نام خانوادگی *</label><input id="customer" name="customer" required placeholder="مثلاً امیرعلی شرهانی"></div>
+        <div class="two">
+          <div class="field"><label for="phone">شماره تماس *</label><input id="phone" name="phone" required inputmode="tel" placeholder="شماره‌ای برای هماهنگی"></div>
+          <div class="field"><label for="service">نوع خدمت *</label><select id="service" name="service" required><option value="">انتخاب خدمت</option><option>تایپ و تنظیم فایل</option><option>چاپ و اسکن</option><option>فرم‌ها و ثبت‌نام</option><option>خدمات دانش‌آموزی</option><option>خدمات اینترنتی</option><option>سایر خدمات</option></select></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="urgency">زمان موردنیاز</label><select id="urgency" name="urgency"><option>عادی</option><option>فوری</option><option>زمان مشخص دارم</option></select></div>
+          <div class="field"><label for="delivery">روش دریافت</label><select id="delivery" name="delivery"><option>هماهنگی تلفنی</option><option>دریافت فایل آنلاین</option><option>مراجعه حضوری</option></select></div>
+        </div>
+        <div class="field"><label for="details">توضیحات سفارش *</label><textarea id="details" name="details" required placeholder="دقیق بنویس چه کاری لازم داری، تعداد صفحات یا جزئیات دیگر..."></textarea></div>
+        <div class="field"><label for="file">نام فایل یا لینک (اختیاری)</label><input id="file" name="file" placeholder="در این نسخه فایل بارگذاری نمی‌شود؛ لینک را وارد کن"></div>
+        <label class="checkline"><input id="confirm" type="checkbox" required><span>اطلاعات سفارش را بررسی کرده‌ام و می‌دانم ارسال این فرم به‌تنهایی به معنی تأیید سفارش یا قیمت نهایی نیست.</span></label>
+        <button class="btn primary" type="submit">آماده‌سازی سفارش</button>
+        <div id="toast" class="toast" role="status"></div>
+        <p class="hint">این نسخه نمایشی است؛ تا وقتی شماره تماس یا سامانه ثبت سفارش واقعی تنظیم نشده، اطلاعات به صاحب کافی‌نت ارسال نمی‌شود.</p>
+      </form>
+      <aside class="panel summary">
+        <h3>خلاصه سفارش</h3>
+        <div class="summary-row"><span>نام مشتری</span><strong id="sCustomer">—</strong></div>
+        <div class="summary-row"><span>خدمت</span><strong id="sService">—</strong></div>
+        <div class="summary-row"><span>زمان</span><strong id="sUrgency">عادی</strong></div>
+        <div class="summary-row"><span>روش دریافت</span><strong id="sDelivery">هماهنگی تلفنی</strong></div>
+        <div class="summary-row total"><span>هزینه</span><strong>پس از بررسی</strong></div>
+        <button class="btn secondary" type="button" id="copyBtn" style="width:100%;margin-top:16px">کپی خلاصه سفارش</button>
+        <div class="notice">نکته امنیتی: رمز عبور، رمز یک‌بارمصرف بانکی یا اطلاعات محرمانه را داخل فرم ننویس.</div>
+      </aside>
+    </div>
+  </section>
+  <section>
+    <div class="section-head"><h2>مراحل کار</h2></div>
+    <div class="steps"><div class="step"><b>۱. ثبت درخواست</b><span class="muted">نوع خدمت و توضیحات را وارد کن.</span></div><div class="step"><b>۲. بررسی سفارش</b><span class="muted">جزئیات و هزینه باید با کافی‌نت هماهنگ شود.</span></div><div class="step"><b>۳. انجام و تحویل</b><span class="muted">پس از تأیید، زمان و روش تحویل مشخص می‌شود.</span></div></div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© کافی‌نت ساحل — سامانه ثبت سفارش</span><span>تماس: <a href="tel:09332731756" style="color:inherit">09332731756</a></span><span>برای راه‌اندازی کامل، راه ارتباطی و محل ذخیره سفارش‌ها باید تنظیم شود.</span></div></footer>
+<script>
+  const $ = id => document.getElementById(id);
+  const fields = ['customer','service','urgency','delivery'];
+  function updateSummary(){
+    $('sCustomer').textContent = $('customer').value.trim() || '—';
+    $('sService').textContent = $('service').value || '—';
+    $('sUrgency').textContent = $('urgency').value;
+    $('sDelivery').textContent = $('delivery').value;
+  }
+  fields.forEach(id => $(id).addEventListener('input', updateSummary));
+  $('orderForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    updateSummary();
+    const data = {
+      'نام مشتری': $('customer').value.trim(),
+      'شماره تماس': $('phone').value.trim(),
+      'نوع خدمت': $('service').value,
+      'زمان موردنیاز': $('urgency').value,
+      'روش دریافت': $('delivery').value,
+      'توضیحات': $('details').value.trim(),
+      'لینک یا نام فایل': $('file').value.trim() || 'ندارد'
+    };
+    const text = Object.entries(data).map(([k,v])=>k+': '+v).join('\n');
+    $('toast').textContent = 'سفارش در همین صفحه آماده شد. برای ارسال به کافی‌نت، خلاصه را کپی کن یا قابلیت ارسال واقعی را بعداً متصل کن.';
+    $('toast').classList.add('show');
+    $('copyBtn').onclick = async () => {
+      try { await navigator.clipboard.writeText(text); $('toast').textContent = 'خلاصه سفارش کپی شد؛ می‌توانی آن را برای صاحب کافی‌نت بفرستی.'; }
+      catch(err) { window.prompt('متن سفارش را کپی کن:', text); }
+      $('toast').classList.add('show');
+    };
+  });
+  $('copyBtn').addEventListener('click', async function(){
+    if (!$('customer').value.trim() && !$('details').value.trim()) {
+      $('toast').textContent = 'اول فرم سفارش را تکمیل کن و روی «آماده‌سازی سفارش» بزن.';
+      $('toast').classList.add('show'); return;
+    }
+    const text = ['نام مشتری: '+$('customer').value,'شماره تماس: '+$('phone').value,'نوع خدمت: '+$('service').value,'زمان موردنیاز: '+$('urgency').value,'روش دریافت: '+$('delivery').value,'توضیحات: '+$('details').value,'لینک یا نام فایل: '+$('file').value].join('\n');
+    try { await navigator.clipboard.writeText(text); $('toast').textContent='خلاصه سفارش کپی شد.'; }
+    catch(err) { window.prompt('متن سفارش را کپی کن:', text); }
+    $('toast').classList.add('show');
+  });
+</script>
+</body>
+</html>
